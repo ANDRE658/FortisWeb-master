@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORTIS - Meu Treino Semanal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- 1. Importando o CSS novo -->
+    <link rel="stylesheet" href="Style/StyleVerSemana.css" />
+  </head>
+
+  <body>
+    <!-- Barra Superior -->
+    <div class="navbar">
+      <div class="d-flex align-items-center">
+        <i class="bi bi-house-door navbar-icon me-3" id="iconHome"></i>
+        <span class="navbar-brand">FORTIS</span>
+      </div>
+      <i class="bi bi-box-arrow-right navbar-icon" title="Sair"></i>
+    </div>
+
+    <!-- Container Principal -->
+    <div class="main-container">
+      <!-- Menu Lateral -->
+      <div class="sidebar">
+        <div class="user-profile">
+          <img
+            src="Assets/Images/FotoUsuario.png"
+            alt="Foto do Usuário"
+            id="fotoUsario"
+          />
+          <div class="user-name" id="userName">Carregando...</div>
+        </div>
+        <ul class="nav-menu">
+        <li data-page="MeusDados.html"><i class="bi bi-person-fill"></i> Meus Dados</li>
+        <li data-page="Alunos.html"><i class="bi bi-person-lines-fill"></i>Alunos</li>
+        <li data-page="Planos.html"><i class="bi bi-coin"></i>Planos</li>
+        <li data-page="Mensalidades.html"><i class="bi bi-cash-coin"></i>Mensalidades</li>
+        <li data-page="Treinos.html" class="active"><i class="bi bi-clipboard2-fill"></i>Treinos</li>
+        <li data-page="Exercicios.html"><i class="bi bi-clipboard2-minus-fill"></i>Exercícios</li>
+        <li data-page="Relatorios.html"><i class="bi bi-file-earmark-fill"></i>Relatórios</li>
+        <li data-page="Instrutor.html"><i class="bi bi-person-lines-fill"></i>Instrutor</li>
+        <li data-page="CadastroGerenciador.html"><i class="bi bi-shield-lock-fill"></i> Novo Admin</li>
+        <li data-page="Suporte.html"><i class="bi bi-headset"></i> Suporte</li>
+      </ul>
+      </div>
+
+      <!-- Conteúdo Principal -->
+      <div class="content">
+        <div class="header-com-botao">
+          <h1 class="page-title">Meu Treino Semanal</h1>
+          <button class="btn btn-edit" id="btnEditarTreino">
+            <i class="bi bi-pencil"></i> Editar Treino
+          </button>
+        </div>
+
+        <!-- ID para feedback de carregamento -->
+        <div id="loadingMessage" style="text-align: center; font-size: 1.2rem; margin-top: 50px;">
+          <p>Buscando sua ficha de treino...</p>
+        </div>
+
+        <!-- Container principal dos treinos -->
+        <div id="containerDias" style="display: none;">
+          <!-- SEGUNDA-FEIRA -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Segunda-Feira</span>
+              <span class="nome-treino-dia" id="nome-SEGUNDA"></span>
+            </div>
+            <div class="exercise-list" id="lista-SEGUNDA">
+              <!-- Exercícios de Segunda -->
+            </div>
+          </div>
+
+          <!-- TERÇA-FEIRA -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Terça-Feira</span>
+              <span class="nome-treino-dia" id="nome-TERCA"></span>
+            </div>
+            <div class="exercise-list" id="lista-TERCA">
+              <!-- Exercícios de Terça -->
+            </div>
+          </div>
+
+          <!-- QUARTA-FEIRA -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Quarta-Feira</span>
+              <span class="nome-treino-dia" id="nome-QUARTA"></span>
+            </div>
+            <div class="exercise-list" id="lista-QUARTA">
+              <!-- Exercícios de Quarta -->
+            </div>
+          </div>
+
+          <!-- QUINTA-FEIRA -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Quinta-Feira</span>
+              <span class="nome-treino-dia" id="nome-QUINTA"></span>
+            </div>
+            <div class="exercise-list" id="lista-QUINTA">
+              <!-- Exercícios de Quinta -->
+            </div>
+          </div>
+
+          <!-- SEXTA-FEIRA -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Sexta-Feira</span>
+              <span class="nome-treino-dia" id="nome-SEXTA"></span>
+            </div>
+            <div class="exercise-list" id="lista-SEXTA">
+              <!-- Exercícios de Sexta -->
+            </div>
+          </div>
+
+          <!-- SABADO -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Sábado</span>
+              <span class="nome-treino-dia" id="nome-SABADO"></span>
+            </div>
+            <div class="exercise-list" id="lista-SABADO">
+              </div>
+          </div>
+
+          <!-- DOMINGO -->
+          <div class="day-section">
+            <div class="day-header">
+              <span>Domingo</span>
+              <span class="nome-treino-dia" id="nome-DOMINGO"></span>
+            </div>
+            <div class="exercise-list" id="lista-DOMINGO">
+              </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 2. Importando o JS novo -->
+    <script src="Script/config.js"></script>
+    <script src="Script/ScriptVerSemana.js"></script>
+    <!-- 3. Importando o Controle de Acesso -->
+    <script src="Script/ScriptControleAcesso.js"></script>
+  </body>
+</html>

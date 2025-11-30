@@ -1,0 +1,262 @@
+/* --- GERAL --- */
+body {
+  background-color: #00008B;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #000066;
+  border-bottom: 2px solid #00BFFF;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-icon {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #000055;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00BFFF;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-menu li {
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.nav-menu li:hover {
+  background-color: #00008B;
+}
+
+.nav-menu li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-menu li i {
+  margin-right: 10px;
+}
+
+.content {
+  flex: 1;
+  background-color: #f5f0e1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* --- FORMULÁRIO --- */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #00008B;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.btn-add-row {
+  background-color: #00008B;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-add-row:hover {
+  background-color: #000066;
+}
+
+.day-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.exercise-table {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.table-header {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-header-item {
+  flex: 1;
+  padding: 0 5px;
+}
+
+.table-header-item-small {
+  flex: 0 0 80px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.table-body {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.table-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 0 5px;
+}
+
+.table-cell-small {
+  flex: 0 0 80px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.input-serie,
+.input-rep {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn-remove-row {
+  color: #dc3545;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.btn-remove-row:hover {
+  color: #c82333;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btn-cancel {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.btn-save {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.nav-menu li.active {
+  background-color: #007bff;
+  color: white;
+}

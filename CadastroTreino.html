@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORTIS - Criar Treino Aluno</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="Style/StyleCadastroTreino.css" />
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-house-door navbar-icon me-3"></i>
+      <span class="navbar-brand">FORTIS</span>
+    </div>
+    <i class="bi bi-box-arrow-right navbar-icon" title="Sair"></i>
+  </div>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="user-profile">
+        <img src="Assets/Images/FotoUsuario.png" alt="Foto do Usuário" id="fotoUsario" />
+        <div class="user-name" id="userName">Carregando...</div>
+      </div>
+
+      <ul class="nav-menu">
+        <li data-page="MeusDados.html"><i class="bi bi-person-fill"></i> Meus Dados</li>
+        <li data-page="Alunos.html"><i class="bi bi-person-lines-fill"></i>Alunos</li>
+        <li data-page="Planos.html"><i class="bi bi-coin"></i>Planos</li>
+        <li data-page="Mensalidades.html"><i class="bi bi-cash-coin"></i>Mensalidades</li>
+        <li data-page="Treinos.html" class="active"><i class="bi bi-clipboard2-fill"></i>Treinos</li>
+        <li data-page="Exercicios.html"><i class="bi bi-clipboard2-minus-fill"></i>Exercícios</li>
+        <li data-page="Relatorios.html"><i class="bi bi-file-earmark-fill"></i>Relatórios</li>
+        <li data-page="Instrutor.html"><i class="bi bi-person-lines-fill"></i>Instrutor</li>
+        <li data-page="CadastroGerenciador.html"><i class="bi bi-shield-lock-fill"></i> Novo Admin</li>
+        <li data-page="Suporte.html"><i class="bi bi-headset"></i> Suporte</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1 class="page-title">Criar treino Aluno</h1>
+
+      <form id="criarTreinoForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="alunoSelect" class="form-label">Aluno</label>
+            <select class="form-control" id="alunoSelect" required>
+              <option value="">Carregando alunos...</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Segunda-Feira</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-SEGUNDA" class="form-label">Nome do Treino (Ex: Peito e Tríceps)</label>
+            <input type="text" class="form-control" id="nome-SEGUNDA" placeholder="Ex: Treino A" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="SEGUNDA">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-SEGUNDA">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Terça-Feira</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-TERCA" class="form-label">Nome do Treino (Ex: Costas e Bíceps)</label>
+            <input type="text" class="form-control" id="nome-TERCA" placeholder="Ex: Treino B" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="TERCA">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-TERCA">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Quarta-Feira</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-QUARTA" class="form-label">Nome do Treino (Ex: Pernas)</label>
+            <input type="text" class="form-control" id="nome-QUARTA" placeholder="Ex: Treino C" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="QUARTA">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-QUARTA">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Quinta-Feira</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-QUINTA" class="form-label">Nome do Treino (Ex: Ombros e Tríceps)</label>
+            <input type="text" class="form-control" id="nome-QUINTA" placeholder="Ex: Treino D" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="QUINTA">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-QUINTA">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Sexta-Feira</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-SEXTA" class="form-label">Nome do Treino (Ex: Full Body)</label>
+            <input type="text" class="form-control" id="nome-SEXTA" placeholder="Ex: Treino E" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="SEXTA">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-SEXTA">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Sábado</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-SABADO" class="form-label">Nome do Treino</label>
+            <input type="text" class="form-control" id="nome-SABADO" placeholder="Ex: Cardio / Full Body" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="SABADO">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-SABADO">
+            </div>
+          </div>
+        </div>
+
+        <div class="day-section">
+          <div class="day-header">
+            <span>Domingo</span>
+          </div>
+          <div class="form-group-inline">
+            <label for="nome-DOMINGO" class="form-label">Nome do Treino</label>
+            <input type="text" class="form-control" id="nome-DOMINGO" placeholder="Ex: Descanso / Alongamento" />
+          </div>
+          <button type="button" class="btn btn-add-row" data-dia="DOMINGO">
+            <i class="bi bi-plus-circle"></i> Adicionar Exercício
+          </button>
+          <div class="exercise-table">
+            <div class="table-header">
+              <div class="table-header-item">Nome do Exercício</div>
+              <div class="table-header-item-small">Série</div>
+              <div class="table-header-item-small">Rep</div>
+              <div class="table-header-item-small"></div>
+            </div>
+            <div class="table-body" id="tabela-DOMINGO">
+            </div>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button type="button" class="btn btn-cancel" onclick="window.location.href='treinos.html'">
+            CANCELAR
+          </button>
+          <button type="submit" class="btn btn-save">SALVAR FICHA</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Script/config.js"></script>
+  <script src="Script/ScriptCadastroTreino.js"></script>
+  <script src="Script/ScriptControleAcesso.js"></script>
+</body>
+
+</html>

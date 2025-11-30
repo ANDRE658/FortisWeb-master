@@ -1,0 +1,89 @@
+body {
+  background-color: #00008b; /* Azul navy */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.login-container {  
+  background-color: #f5f0e1; /* Creme claro */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00008b;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  color: #00008b;
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-control {
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.forgot-password {
+  color: #00008b;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.btn-login {
+  background-color: #00008b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 100%;
+}
+
+.btn-login:hover {
+  background-color: #000066;
+}
+
+.register-link {
+  color: #00008b;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 20px;
+  display: block;
+}

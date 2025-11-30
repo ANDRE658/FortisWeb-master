@@ -1,0 +1,213 @@
+body {
+  background-color: #00008b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #000066;
+  border-bottom: 2px solid #00bfff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-icon {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+}
+.nav-menu li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #000055;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #00bfff;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.nav-menu li {
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.nav-menu li:hover {
+  background-color: #00008b;
+}
+
+.nav-menu li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-menu li i {
+  margin-right: 10px;
+}
+
+.content {
+  flex: 1;
+  background-color: #f5f0e1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.report-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.report-item:hover {
+  background-color: #f8f9fa;
+}
+
+.report-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00008b;
+}
+
+.download-icon {
+  font-size: 24px;
+  color: #00008b;
+}
+
+.download-icon:hover {
+  color: #0056b3;
+}
+
+/* StyleRelatorios.css */
+body {
+  background-color: #00008b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0; height: 100vh; display: flex; flex-direction: column;
+}
+
+.navbar {
+  background-color: #000066; border-bottom: 2px solid #00bfff; padding: 10px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.navbar-brand { font-family: "Playfair Display", serif; font-size: 28px; color: white; font-weight: bold; letter-spacing: 2px; }
+.navbar-icon { color: white; font-size: 24px; cursor: pointer; }
+
+.main-container { display: flex; height: calc(100vh - 60px); overflow: hidden; }
+
+.sidebar { width: 250px; background-color: #000055; color: white; padding: 20px 0; display: flex; flex-direction: column; align-items: center; }
+.user-profile { text-align: center; margin-bottom: 30px; }
+.user-profile img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #00bfff; object-fit: cover; }
+.user-name { font-size: 20px; font-weight: bold; margin-top: 10px; }
+
+.nav-menu { list-style: none; padding: 0; width: 100%; }
+.nav-menu li { padding: 12px 25px; cursor: pointer; transition: background-color 0.3s; font-size: 16px; }
+.nav-menu li:hover { background-color: #00008b; }
+.nav-menu li.active { background-color: #007bff; color: white; }
+.nav-menu li i { margin-right: 10px; }
+
+.content { flex: 1; background-color: #f5f0e1; padding: 30px; overflow-y: auto; }
+.page-title { font-size: 28px; font-weight: bold; margin-bottom: 10px; }
+.section-title { font-size: 20px; font-weight: bold; margin-top: 20px; margin-bottom: 15px; color: #00008b; }
+
+/* --- NOVOS ESTILOS DOS CARDS --- */
+.report-item-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.report-header {
+    display: flex; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;
+}
+.report-title { font-size: 18px; font-weight: bold; color: #00008b; }
+.report-title i { margin-right: 8px; }
+
+.report-filters {
+    display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; background-color: #f9f9f9; padding: 15px; border-radius: 8px;
+}
+
+.filter-group { display: flex; flex-direction: column; }
+.filter-group label { font-size: 12px; font-weight: bold; margin-bottom: 5px; color: #555; }
+.form-control-sm { padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; }
+
+.report-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+.btn-export {
+    border: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; cursor: pointer;
+    display: flex; align-items: center; gap: 5px; transition: transform 0.2s;
+}
+.btn-export:hover { transform: scale(1.05); }
+.btn-export.pdf { background-color: #dc3545; color: white; }
+.btn-export.excel { background-color: #28a745; color: white; }

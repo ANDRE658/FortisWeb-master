@@ -1,0 +1,28 @@
+# Sistema operacional
+desktop.ini
+Thumbs.db
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+*.bat
+
+# IDEs e arquivos temporários
+*.iml
+.idea/
+.vscode/
+*.log
+
+# Maven
+target/
+
+# Arquivos temporários de SO
+*.tmp
+*.bak
+*.swp
+
+# Arquivos de configuração locais
+*.properties.local

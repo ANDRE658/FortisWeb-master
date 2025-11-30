@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FORTIS - Suporte</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style/StyleAlunos.css">
+  <link rel="stylesheet" href="Style/StyleSuporte.css">
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-house-door navbar-icon me-3" id="iconHome"></i>
+      <span class="navbar-brand">FORTIS</span>
+    </div>
+    <i class="bi bi-box-arrow-right navbar-icon" title="Sair"></i>
+  </div>
+
+  <div class="main-container">
+
+    <div class="sidebar">
+      <div class="user-profile">
+        <img src="Assets/Images/FotoUsuario.png" alt="Foto do Usuário" id="fotoUsario">
+        <div class="user-name" id="userName">Carregando...</div>
+      </div>
+
+      <ul class="nav-menu">
+        <li data-page="MeusDados.html"><i class="bi bi-person-fill"></i> Meus Dados</li>
+        <li data-page="Alunos.html"><i class="bi bi-person-lines-fill"></i>Alunos</li>
+        <li data-page="Planos.html"><i class="bi bi-coin"></i>Planos</li>
+        <li data-page="Mensalidades.html"><i class="bi bi-cash-coin"></i>Mensalidades</li>
+        <li data-page="Treinos.html"><i class="bi bi-clipboard2-fill"></i>Treinos</li>
+        <li data-page="Exercicios.html"><i class="bi bi-clipboard2-minus-fill"></i>Exercícios</li>
+        <li data-page="Relatorios.html"><i class="bi bi-file-earmark-fill"></i>Relatórios</li>
+        <li data-page="Instrutor.html"><i class="bi bi-person-lines-fill"></i>Instrutor</li>
+        <li data-page="CadastroGerenciador.html"><i class="bi bi-shield-lock-fill"></i> Novo Admin</li>
+        <li data-page="Suporte.html" class="active"><i class="bi bi-headset"></i> Suporte</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1 class="page-title">Suporte</h1>
+
+      <p class="support-text">
+        Você será redirecionado para uma conversa do WhatsApp ao clicar no botão
+      </p>
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+
+      <button type="button" class="btn btn-support" onclick="contatarSuporte()">
+        CONTATAR SUPORTE
+      </button>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Script/config.js"></script>
+  <script src="Script/ScriptControleAcesso.js"></script>
+  <script>
+    // Função para redirecionar para WhatsApp
+    function contatarSuporte() {
+      // Número de telefone fictício (substitua pelo número real do suporte)
+      const numero = "5511999999999"; // Ex: +55 11 99999-9999
+      const mensagem = encodeURIComponent("Olá, preciso de ajuda com o app Fortis.");
+      const url = `httpsAss://wa.me/${numero}?text=${mensagem}`;
+      window.open(url, '_blank');
+    }
+
+    // Carrega o nome do usuário salvo no localStorage
+    document.addEventListener('DOMContentLoaded', function () {
+      const nomeUsuario = localStorage.getItem('usuarioLogado') || 'Usuário';
+      const elUser = document.getElementById("userName");
+      if (elUser) elUser.textContent = nomeUsuario;
+      // Navegação e Logout
+      document.querySelectorAll(".nav-menu li").forEach((item) => {
+        item.addEventListener("click", function (event) {
+          const pagina = event.currentTarget.dataset.page;
+          if (pagina) window.location.href = pagina;
+        });
+      });
+      // Lógica de Navegação (Home e Sair)
+      document.getElementById("iconHome").addEventListener("click", () => window.location.href = 'home.html');
+      document.querySelector(".navbar .bi-box-arrow-right").addEventListener("click", () => {
+        if (confirm("Deseja sair do sistema?")) {
+          localStorage.clear();
+          window.location.href = "Index.html";
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

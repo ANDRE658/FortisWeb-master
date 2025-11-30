@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FORTIS - Meus Dados</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style/StyleAlunos.css">
+  <link rel="stylesheet" href="Style/StyleMeusDadosForm.css">
+  
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-house-door navbar-icon me-3" id="iconHome"></i>
+      <span class="navbar-brand">FORTIS</span>
+    </div>
+    <i class="bi bi-box-arrow-right navbar-icon" title="Sair"></i>
+  </div>
+
+  <div class="main-container">
+
+    <div class="sidebar">
+      <div class="user-profile">
+        <img src="Assets/Images/FotoUsuario.png" alt="Foto do Usuário" id="fotoUsario">
+        <div class="user-name" id="userName">Carregando...</div>
+      </div>
+
+      <ul class="nav-menu">
+        <li data-page="MeusDados.html" class="active"><i class="bi bi-person-fill"></i> Meus Dados</li>
+        <li data-page="Alunos.html"><i class="bi bi-person-lines-fill"></i>Alunos</li>
+        <li data-page="Planos.html"><i class="bi bi-coin"></i>Planos</li>
+        <li data-page="Mensalidades.html"><i class="bi bi-cash-coin"></i>Mensalidades</li>
+        <li data-page="Treinos.html"><i class="bi bi-clipboard2-fill"></i>Treinos</li>
+        <li data-page="Exercicios.html"><i class="bi bi-clipboard2-minus-fill"></i>Exercícios</li>
+        <li data-page="Relatorios.html"><i class="bi bi-file-earmark-fill"></i>Relatórios</li>
+        <li data-page="Instrutor.html"><i class="bi bi-person-lines-fill"></i>Instrutor</li>
+        <li data-page="CadastroGerenciador.html"><i class="bi bi-shield-lock-fill"></i> Novo Admin</li>
+        <li data-page="Suporte.html"><i class="bi bi-headset"></i> Suporte</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      
+      <h1 class="page-title">Meus dados</h1>
+
+      <form id="meusDadosForm" class="view-mode">
+        <div class="d-flex justify-content-end mb-3">
+          <button type="button" class="btn btn-edit" id="btnToggleEdit">
+            <i class="bi bi-pencil"></i> Editar
+          </button>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" readonly />
+          </div>
+          <div class="form-group">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" readonly />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" class="form-label">Email (Login)</label>
+            <input type="email" class="form-control" id="email" readonly />
+          </div>
+          <div class="form-group">
+            <label for="nascimento" class="form-label">Nascimento</label>
+            <input type="date" class="form-control" id="nascimento" readonly />
+          </div>
+        </div>
+        
+         <div class="form-row">
+          <div class="form-group">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="tel" class="form-control" id="telefone" readonly />
+          </div>
+          <div class="form-group">
+            <label for="sexo" class="form-label">Sexo</label>
+             <select class="form-control" id="sexo" disabled>
+                <option value="" disabled selected>Selecione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+              </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" readonly />
+          </div>
+          <div class="form-group">
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" readonly />
+          </div>
+          <div class="form-group">
+            <label for="estado" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="estado" maxlength="2" readonly />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rua" class="form-label">Rua</label>
+            <input type="text" class="form-control" id="rua" readonly />
+          </div>
+           <div class="form-group" style="flex: 0 0 120px;">
+            <label for="numero" class="form-label">Número</label>
+            <input type="text" class="form-control" id="numero" readonly />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bairro" class="form-label">Bairro</label>
+            <input type="text" class="form-control" id="bairro" readonly />
+          </div>
+        </div>
+
+        <div class="button-row" id="botoesDadosPessoais" style="display: none;">
+          <button type="submit" class="btn btn-save">SALVAR DADOS</button>
+        </div>
+      </form>
+      
+      <hr style="margin: 40px 0;">
+      
+      <h2 class="page-title" style="font-size: 24px; text-align: left;">Alterar Senha</h2>
+      
+      <form id="alterarSenhaForm">
+          <div class="form-row">
+              <div class="form-group">
+                <label for="senhaAtual" class="form-label">Senha Atual</label>
+                <input type="password" class="form-control" id="senhaAtual" required />
+              </div>
+          </div>
+          <div class="form-row">
+               <div class="form-group">
+                <label for="novaSenha" class="form-label">Nova Senha</label>
+                <input type="password" class="form-control" id="novaSenha" required />
+              </div>
+               <div class="form-group">
+                <label for="confirmarNovaSenha" class="form-label">Confirmar Nova Senha</label>
+                <input type="password" class="form-control" id="confirmarNovaSenha" required />
+              </div>
+          </div>
+          
+          <div class="button-row">
+              <span style="flex: 1;"></span>
+              <button type="submit" class="btn btn-save" style="background-color: #007bff;">ALTERAR SENHA</button>
+          </div>
+      </form>
+      
+       <div class="button-row" id="botaoVoltarGeral" style="display: none;">
+          <button type="button" class="btn btn-voltar">Voltar</button>
+       </div>
+      
+    </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="Script/config.js"></script>
+  <script src="Script/ScriptControleAcesso.js"></script>
+  <script src="Script/ScriptMeusDados.js"></script>
+</body>
+</html>
