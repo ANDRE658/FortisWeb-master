@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. Configuração Básica (Nome e Menu)
   const nomeUsuario = localStorage.getItem("usuarioLogado") || "Usuário";
   const role = localStorage.getItem("userRole");
-  
+  console.log("DEBUG: Role lida do armazenamento:", role); // <--- Adicione isso
+  if (!role) {
+      console.warn("DEBUG: Nenhuma role encontrada! Usando fallback de Admin.");
+  }
   // Atualiza nome no menu lateral e no título
   const userElem = document.querySelector(".user-name");
   if (userElem) userElem.textContent = nomeUsuario;
